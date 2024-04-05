@@ -1,5 +1,11 @@
 #root {
-  max-width: 1280px;
+  // max-width: 1280px;
   margin: 0 auto;
   text-align: center;
+  width: 100%;
+}
+
+.App {
+  box-sizing: border-box;
+  border: 2px solid red;
 }
