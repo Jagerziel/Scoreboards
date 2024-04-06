@@ -30,20 +30,30 @@ export default function Navbar() {
     ]
 
     function handleMenu () {
-        setMenuOpen([prev => !prev])
-        console.log('clicked menu')
+        setMenuOpen(prev => !prev)
+        if ( menuOpen === false ) {
+            if ( showScoreboard === true ) setShowScoreboard(false)
+            if ( showOptions === true ) setShowOptions(false)
+        }
     }
-    
+
     function handleScoreboard () {
-        setShowScoreboard([prev => !prev])
-        console.log('clicked scoreboard')
-        
+        setShowScoreboard(prev => !prev)
+        if ( showScoreboard === false ) {
+            if ( menuOpen === true ) setMenuOpen(false)
+            if ( showOptions === true ) setShowOptions(false)
+        }
     }
-    
+
     function handleOptions () {
-        setShowOptions([prev => !prev])
-        console.log('clicked options')
+        setShowOptions(prev => !prev)
+        if ( showOptions === false ) {
+            if ( menuOpen === true ) setMenuOpen(false)
+            if ( showScoreboard === true ) setShowScoreboard(false)
+        }
     }
+
+    console.log(`${showScoreboard}, ${showOptions}, ${menuOpen}`)
 
 
     return (
