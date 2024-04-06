@@ -2,5 +2,39 @@
     border: 2px solid red;
     box-sizing: border-box;
     width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 40px;
+}
 
+.navbar-title {
+    padding-left: 10px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.navbar-subcontainer {
+    // border: 2px solid green;
+    box-sizing: border-box;
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.navbar-icon-container {
+    // border: 2px solid green;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Icon {
+    height: 1.5rem;
+    width: 1.5rem;
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(108deg) brightness(104%) contrast(104%);
 }
