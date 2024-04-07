@@ -4,7 +4,8 @@ import React, { useState } from 'react'
 import MenuIcon from '/public/menuIcon.png'
 import OptionsIcon from '/public/optionsIcon.png'
 import ScoreboardIcon from '/public/scoreboardIcon.png'
-
+// Import Components
+import NavbarMenu from './NavbarMenu.jsx'
 // Import CSS
 import './Navbar.scss'
 
@@ -12,21 +13,6 @@ export default function Navbar() {
     const [ menuOpen, setMenuOpen ] = useState(false)
     const [ showScoreboard, setShowScoreboard ] = useState(false)
     const [ showOptions, setShowOptions ] = useState(false)
-
-    const menu = [
-        {
-            title: "May I",
-            navigation: ""
-        },
-        {
-            title: "Remi",
-            navigation: ""
-        },
-        {
-            title: "Yahtzee",
-            navigation: ""
-        },
-    ]
 
     function handleMenu () {
         setMenuOpen(prev => !prev)
@@ -92,7 +78,14 @@ export default function Navbar() {
                         loading="lazy" 
                     /> 
                 </div>
-                
+            </div>
+            <div 
+                className='navbar-navbarmenu-container'
+                style={{
+                    display: menuOpen ? 'block' : 'none'
+                }}
+            >
+                <NavbarMenu setMenuOpen={setMenuOpen}/>
             </div>
         </div>
     )
