@@ -5,7 +5,6 @@ import MenuIcon from '/public/menuIcon.png'
 import OptionsIcon from '/public/optionsIcon.png'
 import ScoreboardIcon from '/public/scoreboardIcon.png'
 
-
 // Import CSS
 import './Navbar.scss'
 
