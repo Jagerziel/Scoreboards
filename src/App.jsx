@@ -4,6 +4,7 @@ import { Route, Routes } from 'react-router'
 // Import Components
 import Navbar from './components/navbar/Navbar'
 import Home from './screens/Home.jsx'
+// Import Game Screens (list alphabetically)
 import MayI from './screens/MayI.jsx'
 import Remi from './screens/Remi.jsx'
 import Yahtzee from './screens/Yahtzee.jsx'
