@@ -10,7 +10,7 @@ import NavbarMenu from './NavbarMenu.jsx'
 // Import CSS
 import './Navbar.scss'
 
-export default function Navbar( { setPlayerCount } ) {
+export default function Navbar( { playerCount, setPlayerCount } ) {
     const [ menuOpen, setMenuOpen ] = useState(false)
     const [ showScoreboard, setShowScoreboard ] = useState(false)
     const [ showOptions, setShowOptions ] = useState(false)
@@ -83,7 +83,7 @@ export default function Navbar( { setPlayerCount } ) {
                     display: showOptions ? 'block' : 'none'
                 }}
             >
-                <NavbarOptions setPlayerCount={ setPlayerCount } />
+                <NavbarOptions playerCount={ playerCount } setPlayerCount={ setPlayerCount } />
             </div>
 
 

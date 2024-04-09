@@ -10,13 +10,11 @@ export default function MayI() {
     // Navbar UseStates
     const [ playerCount, setPlayerCount ] = useState(2)
 
-
-
     console.log(playerCount)
 
     return (
         <>
-            <Navbar setPlayerCount={ setPlayerCount } />
+            <Navbar playerCount={ playerCount } setPlayerCount={ setPlayerCount } />
             <div className='MayI-container'>
                 <div className='MayI-title'>
                     MayI

@@ -50,7 +50,7 @@
 }
 
 .navbar-navbaroptions-container {
-    border: 2px solid green;
+    border: 2px solid white;
     box-sizing: border-box;
     position: absolute;
     top: 40px;
@@ -70,8 +70,26 @@
 }
 
 .navbaroptions-subcontainer {
-    border: 2px solid yellow;
-    box-sizing: border-box;
+    // border: 2px solid yellow;
+    // box-sizing: border-box;
+    display: flex;
+}
+
+.navbaroptions-btn-container {
+    border: 2px solid white;
+    border-radius: 5px;
+    width: 150px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:rgba(255, 255, 255, 0.124);
+    &:hover {
+        background:rgba(255, 255, 255, 0.384);
+    }
+    &:active {
+        background:rgba(255, 255, 255, 0.633);
+    }
 }
 
 .navbarmenu-container {
