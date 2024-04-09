@@ -1,5 +1,5 @@
 // Import React
-import React from 'react'
+import React, { useState } from 'react'
 // Import Components
 import Navbar from '../components/navbar/Navbar.jsx'
 
@@ -7,11 +7,21 @@ import Navbar from '../components/navbar/Navbar.jsx'
 import './MayI.scss'
 
 export default function MayI() {
+    // Navbar UseStates
+    const [ playerCount, setPlayerCount ] = useState(2)
+
+
+
+    console.log(playerCount)
+
     return (
         <>
-            <Navbar />
+            <Navbar setPlayerCount={ setPlayerCount } />
             <div className='MayI-container'>
-                MayI
+                <div className='MayI-title'>
+                    MayI
+                </div>
+
             </div>
         </>
     )

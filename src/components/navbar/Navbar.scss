@@ -49,6 +49,31 @@
     z-index: 100;
 }
 
+.navbar-navbaroptions-container {
+    border: 2px solid green;
+    box-sizing: border-box;
+    position: absolute;
+    top: 40px;
+    width: 100%;
+    height: 50px;
+    background-color: #242424;
+}
+
+.navbaroptions-container {
+    // border: 2px solid purple;
+    // box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.navbaroptions-subcontainer {
+    border: 2px solid yellow;
+    box-sizing: border-box;
+}
+
 .navbarmenu-container {
     border: 2px solid white;
     // box-sizing: border-box;
