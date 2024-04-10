@@ -5,6 +5,7 @@ import MenuIcon from '/public/menuIcon.png'
 import OptionsIcon from '/public/optionsIcon.png'
 import ScoreboardIcon from '/public/scoreboardIcon.png'
 // Import Components
+import NavbarScoreboard from './NavbarScoreboard.jsx'
 import NavbarOptions from './NavbarOptions.jsx'
 import NavbarMenu from './NavbarMenu.jsx'
 // Import CSS
@@ -40,63 +41,68 @@ export default function Navbar( { playerCount, setPlayerCount } ) {
     }
 
     return (
-        <div className='navbar-container'>
-            <div className='navbar-title'>Scoreboards</div>
-            <div className='navbar-subcontainer'>
-                <div 
-                    className='navbar-icon-container'
-                    onClick={handleScoreboard}
+        <div className='navbar-container-main'>
+            <div className='navbar-container'>
+                <div className='navbar-title'>Scoreboards</div>
+                <div className='navbar-subcontainer'>
+                    <div 
+                        className='navbar-icon-container'
+                        onClick={handleScoreboard}
+                    >
+                        <img 
+                            src={ScoreboardIcon}
+                            alt="Scoreboard" 
+                            className='Icon'
+                            loading="lazy" 
+                        /> 
+                    </div>
+                    <div 
+                        className='navbar-icon-container'
+                        onClick={handleOptions}
+                    >
+                        <img 
+                            src={OptionsIcon}
+                            alt="Options" 
+                            className='Icon'
+                            loading="lazy" 
+                        /> 
+                    </div>
+                    <div 
+                        className='navbar-icon-container'
+                        onClick={handleMenu}
+                    >
+                        <img 
+                            src={MenuIcon}
+                            alt="Menu" 
+                            className='Icon'
+                            loading="lazy" 
+                        /> 
+                    </div>
+                </div>
+                <div
+                    className='navbar-navbaroptions-container'
+                    style={{
+                        display: showOptions ? 'block' : 'none'
+                    }}
                 >
-                    <img 
-                        src={ScoreboardIcon}
-                        alt="Scoreboard" 
-                        className='Icon'
-                        loading="lazy" 
-                    /> 
+                    <NavbarOptions playerCount={ playerCount } setPlayerCount={ setPlayerCount } />
                 </div>
                 <div 
-                    className='navbar-icon-container'
-                    onClick={handleOptions}
+                    className='navbar-navbarmenu-container'
+                    style={{
+                        display: menuOpen ? 'block' : 'none'
+                    }}
                 >
-                    <img 
-                        src={OptionsIcon}
-                        alt="Options" 
-                        className='Icon'
-                        loading="lazy" 
-                    /> 
-                </div>
-                <div 
-                    className='navbar-icon-container'
-                    onClick={handleMenu}
-                >
-                    <img 
-                        src={MenuIcon}
-                        alt="Menu" 
-                        className='Icon'
-                        loading="lazy" 
-                    /> 
+                    <NavbarMenu setMenuOpen={setMenuOpen}/>
                 </div>
             </div>
             <div
-                className='navbar-navbaroptions-container'
+                className='navbar-navbarscoreboard-container'
                 style={{
-                    display: showOptions ? 'block' : 'none'
+                    display: showScoreboard ? 'block' : 'none'
                 }}
             >
-                <NavbarOptions playerCount={ playerCount } setPlayerCount={ setPlayerCount } />
-            </div>
-
-
-
-
-
-            <div 
-                className='navbar-navbarmenu-container'
-                style={{
-                    display: menuOpen ? 'block' : 'none'
-                }}
-            >
-                <NavbarMenu setMenuOpen={setMenuOpen}/>
+                <NavbarScoreboard />
             </div>
         </div>
     )

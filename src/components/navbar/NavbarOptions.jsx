@@ -12,7 +12,6 @@ export default function NavbarOptions( { playerCount, setPlayerCount } ) {
         if ( newVal >= 2 && newVal <= 10) {
             setPlayerCount(newVal)
         }
-
     }
 
     const options = [
